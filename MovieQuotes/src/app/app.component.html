@@ -1,10 +1,25 @@
-  <h1>
-   Movie Quotes by Jonathan Kurian
-  </h1>
-  <input type="text" placeholder="Quote" name="quote" [(ngModel)]="movieQuote.quote">
-  <br>
-  <input type="text" placeholder="from Movie" name="movie" [(ngModel)]="movieQuote.movie">
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <h1>
+         Movie Quotes by Jonathan Kurian
+      </h1>
+    </div>
+  </nav>
+<div class="container">
+  <div class="well well-lg">
+  <form>
+<div class="form-group">
+  </div>
+<input type="text" class="form-control" placeholder="Quote" name="quote" [(ngModel)]="movieQuote.quote">
+  <div class="form-group">
+    <input type="text"  class="form-control" placeholder="from Movie" name="movie" [(ngModel)]="movieQuote.movie">
+  </div>
 <p *ngIf="movieQuote.movie && movieQuote.quote">
   the best quote <b>{{movieQuote.movie}}</b> 
   is <b>"{{movieQuote.quote}}"</b>
 </p>
+<button type="button" class="btn btn-default pull-right">Submit</button>
+<div class="clearfix"></div>
+</form>
+</div>
+</div>
