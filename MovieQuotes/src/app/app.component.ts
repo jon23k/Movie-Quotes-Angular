@@ -25,8 +25,12 @@ export class AppComponent {
 
   onSubmit(): void {
     try{
-    console.log("submitted: ", this.formMovieQuote);
+      if(this.formMovieQuote.$key){
+        this.movieQuotesStream.update(this.formMovieQuote.$key, this.formMovieQuote);
+      }
+      else{
     this.movieQuotesStream.push(this.formMovieQuote);
+      }
     this.formMovieQuote = {
       'quote': '',
       'movie': ''
@@ -36,5 +40,13 @@ export class AppComponent {
     console.log("Form Error: ", e);
   }
 
-  }
+}
+
+edit(movieQuote: MovieQuote): void{
+  this.formMovieQuote = movieQuote;
+}
+
+remove(movieQuoteKey: string): void{
+  this.movieQuotesStream.remove(movieQuoteKey);
+}
 }
