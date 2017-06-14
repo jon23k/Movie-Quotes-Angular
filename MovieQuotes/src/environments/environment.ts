@@ -4,5 +4,13 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+     apiKey: "AIzaSyAniyfWv8x4BRCApeNY8cjnYvNwdx-pTGY",
+    authDomain: "kurianj-movie-quotes-a3a17.firebaseapp.com",
+    databaseURL: "https://kurianj-movie-quotes-a3a17.firebaseio.com",
+    projectId: "kurianj-movie-quotes-a3a17",
+    storageBucket: "kurianj-movie-quotes-a3a17.appspot.com",
+    messagingSenderId: "188917425284"
+  }
 };
